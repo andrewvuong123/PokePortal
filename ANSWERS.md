@@ -16,6 +16,8 @@ A: In the redirect_to I just passed in pokemon.trainer which is redirecting to t
 # Question 5: Explain how putting this line "flash[:error] = @pokemon.errors.full_messages.to_sentence" shows error messages on your form.
 A: The line takes the error message from the validation and uses data from the form to render it in the view.
 
+REPO: https://github.com/andrewvuong123/proj1
+
 # Give us feedback on the project and decal below!
 
 # Extra credit: Link your Heroku deployed app

@@ -10,8 +10,17 @@ class PokemonController < ApplicationController
 		pokemon = Pokemon.find(params[:id])
 		pokemon.health = pokemon.health - 10
 		pokemon.save()
-		if pokemon.health <= 0
-			pokemon.destroy
+		redirect_to pokemon.trainer
+	end
+
+	def heal
+		pokemon = Pokemon.find(params[:id])
+		if pokemon.health == 100
+			flash[:error] = "Your pokemon is at full health"
+		else
+			pokemon.health = pokemon.health + 10
+			pokemon.save()
+		
 		end
 		redirect_to pokemon.trainer
 	end
